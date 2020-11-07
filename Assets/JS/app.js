@@ -53,27 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Faith
 
 
