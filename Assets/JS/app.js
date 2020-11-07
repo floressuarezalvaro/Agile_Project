@@ -76,18 +76,22 @@ console.log("hello world")
 
 
 //Alvaro 
-var key = 'AIzaSyDgOQIrGftzlp5IuWOtEiSU0Iw4tWvD_NE'
-//function searchYt(vid) {
-    var ytUrl = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US&key=${key}`
-    fetch(ytUrl)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        console.log(data);
-    });
+var searchCountry = document.querySelector('#search-form');
+// var key = 'AIzaSyDgOQIrGftzlp5IuWOtEiSU0Iw4tWvD_NE'
 
-//}
+function handleSearchFormSubmit(e) {
+    e.preventDefault();
+  
+    var countryInput = document.querySelector('#country-input').value;
+    console.log(countryInput)
+    if (!countryInput) {
+      console.error('You need a search input value!');
+      return;
+    }
+  
+    // var queryString = './results-index.html'
+    // //add country code, key, and other parameters
+    //  location.assign(queryString);
+  }
 
-
-//https://developers.google.com/youtube/v3/docs/
+searchCountry.addEventListener('submit', handleSearchFormSubmit);
