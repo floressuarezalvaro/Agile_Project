@@ -1,0 +1,40 @@
+h1 {
+  color: red;
+}
+
+/* Jacky */
+
+/* Franco */
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3em;
+  /* color: #fff; */
+  /* text-shadow: 0.1em 0.1em 0 rgba(0, 0, 0, 0.3); */
+  height: 100vh;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(
+    to right top,
+    #99bbcb,
+    #a5c7d7,
+    #b1d4e2,
+    #bde0ee,
+    #c9edfa
+  );
+}
+
+#navBar {
+  position: fixed; /* Set the navbar to fixed position */
+  width: 100%; /* Full width */
+}
+
+#footer {
+  position: fixed; /* Set the navbar to fixed position */
+  bottom: 0;
+  width: 100%; /* Full width */
+}
+
+/* Faith */
+
+/* Alvaro */
