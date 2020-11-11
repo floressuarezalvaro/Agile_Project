@@ -8,13 +8,14 @@ function getParams() {
     // Get the country
     var Country = searchCountryArr[0].split('=').pop();
     searchYoutube(Country)
+    console.log(Country)
 }
 
 getParams()
 
-function searchYoutube (country) {
-    // var ytUrl = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=${Country}&key=${key}`
-    var ytUrl = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US&key=${key}`
+function searchYoutube (Country) {
+    var ytUrl = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=${Country}&key=${key}`
+    // var ytUrl = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US&key=${key}`
     
     fetch(ytUrl)
     .then(function (response) {
