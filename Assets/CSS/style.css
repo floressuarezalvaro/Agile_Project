@@ -1,12 +1,8 @@
 h1 {
-
-  color: red
+  color: red;
 }
 
 /* Jacky */
-
-
-
 
 /* Franco */
 body {
@@ -33,6 +29,22 @@ body {
   width: 100%; /* Full width */
 }
 
+#paragraph {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#bodyButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+}
+
 #footer {
   position: fixed; /* Set the navbar to fixed position */
   bottom: 0;
@@ -40,17 +52,5 @@ body {
 }
 
 /* Faith */
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Alvaro */
