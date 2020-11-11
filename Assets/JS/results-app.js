@@ -1,10 +1,26 @@
-// var ytUrl = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US&key=${key}`
-// fetch(ytUrl)
-// .then(function (response) {
-//     return response.json();
-// })
-// .then(function (data) {
-//     console.log(data);
-// });
+var searchForm = document.querySelector('#country-form');
+var key = 'AIzaSyDgOQIrGftzlp5IuWOtEiSU0Iw4tWvD_NE'
 
-//https://developers.google.com/youtube/v3/docs/
+function getParams() {
+    // Get the country params out of the URL and convert it to an array
+    var searchCountryArr = document.location.search.split('&');
+  
+    // Get the country
+    var Country = searchCountryArr[0].split('=').pop();
+    searchYoutube(Country)
+}
+
+getParams()
+
+function searchYoutube (country) {
+    // var ytUrl = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=${Country}&key=${key}`
+    var ytUrl = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US&key=${key}`
+    
+    fetch(ytUrl)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        console.log(data);
+    });
+};
