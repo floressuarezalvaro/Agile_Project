@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project 1</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-
     <link rel="stylesheet" href="./Assets/CSS/style.css">
 </head>
 <body>
@@ -37,69 +36,94 @@
 
 <!-- Franco -->
 <nav id="navBar" class="navbar" role="navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="https://bulma.io">
-        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://bulma.io">
+      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+    </a>
+<!-- This needs to change to our app name or icon -->
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+<!-- This Should link to the landing page -->
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="./index.html">
+        <i class="fas fa-h-square"> Home</i>
       </a>
-  <!-- This needs to change to our app name or icon -->
-      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
+<!-- This can get changed to randomize a new set of popular videos || we can change this to link directly to blog page -->
+      <a class="navbar-item" href="./Other.html">
+        Documentation
       </a>
     </div>
-  <!-- This Should link to the landing page -->
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item" href="./index.html">
-          Home
-        </a>
-  <!-- This can get changed to randomize a new set of popular videos || we can change this to link directly to blog page -->
-        <a class="navbar-item" href="./Other.html">
-          Documentation
-        </a>
-      </div>
-  <!-- We can update this to add more countries -->
-      <div class="navbar-end">
-        <div class="navbar-item has-dropdown is-hoverable navbar-end">
-            <a class="navbar-link">
-              Country
+<!-- We can update this to add more countries -->
+    <div class="navbar-end">
+      <div class="navbar-item has-dropdown is-hoverable navbar-end">
+          <a class="navbar-link">
+            Country
+          </a>
+  
+          <div class="navbar-dropdown">
+            <a class="navbar-item">
+              United States
             </a>
-    
-            <div class="navbar-dropdown">
-              <a class="navbar-item">
-                United States
-              </a>
-              <a class="navbar-item">
-                Canada
-              </a>
-              <a class="navbar-item">
-                Mexico
-              </a>
-            </div>
+            <a class="navbar-item">
+              Canada
+            </a>
+            <a class="navbar-item">
+              Mexico
+            </a>
           </div>
-      </div>
+        </div>
     </div>
-  </nav>
+  </div>
+</nav>
 <section class="section">
 <div class="container">
-    <div class="columns is-vcentered">
-        <div class="column is-8">
-          <p class="bd-notification is-primary">This application was assigned by UC Berkeley Bootcamp and solves real-world problems by integrating data received from multiple server-side API requests. The website was built collaboratively by scratch using visual studio code and deployed from Github pages. The website is designed to let a user view popular music videos from around the world and to be able to comment and share their comment with the appropriate video. Once the user chooses a country and clicks the submit button, a new page will present various music videos using YouTube API. This application is user friendly and consists of a top navbar for direction. Multiple coding pages are used such as index.html, style.css, app.js and a resultsapp.js page. Bulma is the CSS framework used to style the web page and Blogger is used to take in user input for comments The hope of this web application is to provide a fun and interactive music video sharing tool that the user finds to be friendly and simple to navigate.</p>
-        </div>
-        <div class="column">
-            <button class="button">Button</button>
-        </div>
+  <div class="columns">
+      <div class="column is-6">
+        <p id="paragraph" class="bd-notification is-primary">This application was assigned by UC Berkeley Bootcamp and solves real-world problems by integrating data received from multiple server-side API requests. The website was built collaboratively by scratch using visual studio code and deployed from Github pages. The website is designed to let a user view popular music videos from around the world and to be able to comment and share their comment with the appropriate video. Once the user chooses a country and clicks the submit button, a new page will present various music videos using YouTube API. This application is user friendly and consists of a top navbar for direction. Multiple coding pages are used such as index.html, style.css, app.js and a resultsapp.js page. Bulma is the CSS framework used to style the web page and Blogger is used to take in user input for comments The hope of this web application is to provide a fun and interactive music video sharing tool that the user finds to be friendly and simple to navigate.</p>
       </div>
+      <div class="column is-6">
+        <div id= "bodyButton" class="column">
+          <div class="dropdown is-hoverable">
+            <div class="dropdown-trigger">
+              <button class="button is-large is-rounded" aria-haspopup="true" aria-controls="dropdown-menu4">
+                <span><i class="fas fa-globe-americas"> Country</i></span>
+                <span class="icon is-small">
+                  <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+              </button>
+            </div>
+            <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+              <div class="dropdown-content">
+                <div class="dropdown-item">
+                  <a><strong><i class="fas fa-flag"> United States</i></strong></a>
+                </div>
+                <div class="dropdown-item">
+                  <a><strong><i class="fas fa-flag"> Canada</i></strong></a>
+                </div>
+                <div class="dropdown-item">
+                  <a><strong><i class="fas fa-flag"> United Kingdom</i></strong></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="button is-large is-rounded">
+            <i class="fas fa-play-circle"> Generate</i>
+          </button>
+       </div>
+      </div>
+    </div>
 </div>
 </section>
 <footer id="footer" class="footer">
 <div class="content has-text-centered">
-  <p>
-    <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-    <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-    is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-  </p>
+<p>
+  input links to the group github and each team members linkedIn
+</p>
 </div>
 </footer>
 
@@ -144,7 +168,7 @@
     </select>
     <button id="Search YouTube">Click Me</button>
 </form>
-
+<script src="https://kit.fontawesome.com/8b64433d1e.js" crossorigin="anonymous"></script>
 <script src="Assets/JS/app.js"></script>
 <script src=""></script>
 </body>
