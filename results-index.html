@@ -54,9 +54,30 @@
           </div>
         </div>
       </nav>
-      <div>
-        <p id="topresults"></p>
+
+      
+      <!-- Three columns, 4 / 6 / 2  (Video Description, Video itself centered, "Menu" on the right) -->
+      <div class="columns">
+        <div class="column is-one-quarter" id="video-info" class="has-background-white">
+          <!-- LEFT COLUMN WITH VIDEO TITLE/DESC/Uploader -->
+          <header id="video-title" class="title"><strong>Title Video</strong></header>
+          <header id="video-uploader" class="subtitle">Uploader/Channel Name</header>
+          <p id="video-desc">Loren ipsum It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is t.
+          </p>
+        </div>
+
+        <div class="column is-half" id="video-playback">
+          <!-- MIDDLE VIDEO EMBED -->
+          <iframe width="100%" height="400" src="https://www.youtube.com/embed/KPlrXTOzegY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>          
+        </div>
+      
+        <div class="column is-one-fifth" id="video-list" class="has-background-white">
+          <!-- Video List, look into override mini mode reshuffling order -->
+          <p id="topresults"></p>
+        </div>
       </div>
+
+
   <script src="./Assets/JS/results-app.js"></script>
   </body>
 </html>
