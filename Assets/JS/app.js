@@ -79,11 +79,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 //Alvaro 
-var searchCountry = document.querySelector('#search-form');
-// var key = 'AIzaSyDgOQIrGftzlp5IuWOtEiSU0Iw4tWvD_NE'
+var searchCountry = document.querySelector('#country-form');
 
-function handleSearchFormSubmit(e) {
-    e.preventDefault();
+function handleSearchFormSubmit(event) {
+    event.preventDefault();
   
     var countryInput = document.querySelector('#country-input').value;
     console.log(countryInput)
@@ -92,9 +91,8 @@ function handleSearchFormSubmit(e) {
       return;
     }
   
-    // var queryString = './results-index.html'
-    // //add country code, key, and other parameters
-    //  location.assign(queryString);
+    var queryUrl = './results-index.html?q=' + countryInput;
+    location.assign(queryUrl);
   }
 
 searchCountry.addEventListener('submit', handleSearchFormSubmit);
