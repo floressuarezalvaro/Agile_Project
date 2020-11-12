@@ -40,8 +40,17 @@ function searchYoutube (Country) {
 function showVids (itemsObj) {
     console.log(itemsObj)
     let ytDiv = document.createElement('div');
-    let ytBody = document.createElement('p');
-    ytContent.innerHTML = '<strong>ID:</strong> ' + itemsObj.id + '<br/>';
+    let ytBody = document.createElement('div');
+    ytDiv.append(ytBody);
+
+    var idContent = document.createElement('p');
+    idContent.innerHTML = '<strong>ID:</strong> ' + itemsObj.id + '<br/>';
+
+    var snippetContent = document.createElement('p');
+    snippetContent.innerHTML = '<strong>Snippet:</strong> ' + itemsObj.snippet.channelTitle + '<br/>';
+
+    ytBody.append(idContent, snippetContent)
+    ytContent.append(ytDiv)
 }
 
 getParams()
