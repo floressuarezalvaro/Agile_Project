@@ -9,74 +9,97 @@
   </head>
 
   <body>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="https://bulma.io">
-            <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+    <!-- Navigation Bar-->
+  <nav id="navBar" class="navbar is-primary" role="navigation">
+    <div class="navbar-brand">
+  <!-- This needs to change to our app name or icon -->
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <!-- Home Link -->
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="./index.html">
+            <i class="fas fa-h-square"> Home</i>
           </a>
-      <!-- This needs to change to our app name or icon -->
-          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
+    <!-- Github Link -->
+          <a class="fas navbar-item" href="https://github.com/tongjac/Agile_Project/blob/main/README.md">
+            Documentation
           </a>
         </div>
-      <!-- This Should link to the landing page -->
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item" href="./index.html">
-              Home
-            </a>
-      <!-- This can get changed to randomize a new set of popular videos || we can change this to link directly to blog page -->
-            <a class="navbar-item" href="./Other.html">
-              Documentation
-            </a>
-          </div>
-      <!-- We can update this to add more countries -->
-          <div class="navbar-end">
-            <div class="navbar-item has-dropdown is-hoverable navbar-end">
-                <a class="navbar-link">
-                  Country
+    <!-- Country Link (Outdated) -->
+        <div class="navbar-end">
+          <div class="navbar-item has-dropdown is-hoverable navbar-end">
+              <a class="navbar-link">
+                Country
+              </a>
+      
+              <div class="navbar-dropdown">
+                <a class="navbar-item">
+                  United States
                 </a>
-        
-                <div class="navbar-dropdown">
-                  <a class="navbar-item">
-                    United States
-                  </a>
-                  <a class="navbar-item">
-                    Canada
-                  </a>
-                  <a class="navbar-item">
-                    Mexico
-                  </a>
-                </div>
+                <a class="navbar-item">
+                  Canada
+                </a>
+                <a class="navbar-item">
+                  Mexico
+                </a>
               </div>
-          </div>
+            </div>
         </div>
-      </nav>
+      </div>
+  </nav>
 
       
+  <section class="section">
+    <div class="container">
       <!-- Three columns, 4 / 6 / 2  (Video Description, Video itself centered, "Menu" on the right) -->
       <div class="columns">
-        <div class="column is-one-quarter" id="video-info" class="has-background-white">
-          <!-- LEFT COLUMN WITH VIDEO TITLE/DESC/Uploader -->
+
+        <!-- LEFT COLUMN WITH VIDEO TITLE/DESC/Uploader -->
+        <div class="column is-one-quarter" id="video-info" class="has-background-white">  
           <header id="video-title" class="title"><strong>Title Video</strong></header>
           <header id="video-uploader" class="subtitle">Uploader/Channel Name</header>
           <p id="video-desc">Loren ipsum It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is t.
           </p>
         </div>
 
+        <!-- MIDDLE COLUMN Video Embed, Comment Box, Comment Button, Comment Section -->
         <div class="column is-half" id="video-playback">
-          <!-- MIDDLE VIDEO EMBED -->
           <iframe width="100%" height="400" src="https://www.youtube.com/embed/KPlrXTOzegY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>          
+
+          <!-- MIDDLE COMMENT FIELD EMBED -->
+          <p><textarea width="100%" rows="8" placeholder="Comment Here" id="video-comment-box"></textarea></textarea></p>
+          <p><button id="video-comment-submit"> Submit</button></p>
+          
+          <!-- Comment section -->
+
+
         </div>
       
-        <div class="column is-one-fifth" id="video-list" class="has-background-white">
-          <!-- Video List, look into override mini mode reshuffling order -->
-          <p id="topresults"></p>
-        </div>
-      </div>
+        <!-- Video List, look into override mini mode reshuffling order -->
+        <div class="column is-one-quarter has-background-white" id="video-list">
+          
+          
+          <!-- Begin Video List element -->
+          <p id="topresults" alignment="center">
 
+            
+            <div id="video-list-elements">
+              <img src="https://i.ytimg.com/vi/1dRHeAiJ8u0/default.jpg"><br>
+              <b>snippet:title</b> [PT 8M 57S]=> [8:57]
+            </div>
+          </p>
+          
+          
+        </div>
+
+      </div>
+    </div>
+  </section>
 
   <script src="./Assets/JS/results-app.js"></script>
   </body>

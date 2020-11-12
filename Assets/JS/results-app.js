@@ -43,13 +43,19 @@ function showVids (itemsObj) {
     let ytBody = document.createElement('div');
     ytDiv.append(ytBody);
 
+    var vidThumb = document.createElement('p');
+    vidThumb.innerHTML = '<img src="' + itemsObj.snippet.thumbnails.default.url + '"><br/>';
+    
     var idContent = document.createElement('p');
     idContent.innerHTML = '<strong>ID:</strong> ' + itemsObj.id + '<br/>';
 
     var snippetContent = document.createElement('p');
-    snippetContent.innerHTML = '<strong>Snippet:</strong> ' + itemsObj.snippet.channelTitle + '<br/>';
+    snippetContent.innerHTML = '<strong>Snippet:</strong> ' + itemsObj.snippet.channelTitle + ' // ';
 
-    ytBody.append(idContent, snippetContent)
+    var vidDuration = document.createElement('p');
+    vidDuration.innerHTML = ' ' + itemsObj.contentDetails.duration + '<br/>';
+
+    ytBody.append(vidThumb, idContent, snippetContent, vidDuration)
     ytContent.append(ytDiv)
 }
 
