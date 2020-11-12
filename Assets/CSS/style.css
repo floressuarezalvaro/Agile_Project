@@ -1,56 +1,76 @@
-h1 {
-  color: red;
-}
-
-/* Jacky */
-
-/* Franco */
 body {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.3em;
-  /* color: #fff; */
-  /* text-shadow: 0.1em 0.1em 0 rgba(0, 0, 0, 0.3); */
   height: 100vh;
-  /* display: flex; */
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(
-    to right top,
-    #99bbcb,
-    #a5c7d7,
-    #b1d4e2,
-    #bde0ee,
-    #c9edfa
-  );
+  /* background-image: url("https://geology.com/world/world-map.gif");
+  background-repeat: no-repeat;
+  background-size: static; */
+}
+
+.container {
+  height: 89vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../Photo/WorldMap.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+}
+
+/* .bgimage {
+  background-image: url("./Photos/WorldMap.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+} */
+
+img {
+  opacity: 0.2;
 }
 
 #navBar {
   position: fixed; /* Set the navbar to fixed position */
   width: 100%; /* Full width */
+  background-color: gray;
 }
 
 #paragraph {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
   padding-top: 1rem;
   padding-bottom: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 1 !important;
 }
 
-#bodyButton {
+a {
+  color: white;
+}
+
+#country-form {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 75vh;
+  /* height: 75vh; */
+  /* padding-bottom: 75%; */
+}
+
+#gitHubLink {
+  align-items: flex-start;
 }
 
 #footer {
   position: fixed; /* Set the navbar to fixed position */
   bottom: 0;
   width: 100%; /* Full width */
+  height: 5%;
+  padding: 3rem;
+  padding-top: 20px;
+  background-color: gray;
 }
-
-/* Faith */
-
-/* Alvaro */
