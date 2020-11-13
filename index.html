@@ -12,32 +12,23 @@
   <body>
     <!-- Navigation -->
     <nav id="navBar" class="navbar is-primary" role="navigation">
-      <div class="navbar-brand">
-      <!-- This needs to change to our app name or icon -->
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-      <!-- This Should link to the landing page -->
+      <!-- Links to landing page Index.html -->
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
           <a class="navbar-item" href="./index.html">
             <i class="fas fa-h-square"> Home</i>
           </a>
-          <!-- This can get changed to randomize a new set of popular videos || we can change this to link directly to blog page -->
+          <!-- Link to documentation -->
           <a class="fas navbar-item" href="https://github.com/tongjac/Agile_Project/blob/main/README.md" target="_blank">
             Documentation
           </a>
         </div>
-        <!-- Links to our Linkedin and our central github -->
-        <div class="navbar-end">
+        <!-- Located at the end of the Navbar, links to our Linkedin and our central github -->
           <div class="navbar-item has-dropdown is-hoverable navbar-end">
             <a class="navbar-link">
               Links
             </a>
-            <div class="navbar-dropdown" data-style="width: 18rem;">
+            <div class="navbar-dropdown">
               <a id="links" class="fab fa-github navbar-item" href="https://github.com/tongjac/Agile_Project" target="_blank"> Bug Busters</a>
               <a class="fab fa-linkedin navbar-item" href="https://www.linkedin.com/in/faith-elsen-6a7a931b5/" target="_blank"> Faith</a>
               <a class="fab fa-linkedin navbar-item" href="https://www.linkedin.com/in/tong-jacky/" target="_blank"> Jacky</a>
@@ -45,7 +36,6 @@
               <a class="fab fa-linkedin navbar-item" href="https://www.linkedin.com/in/franco-phan-5b14b7144/" target="_blank"> Franco</a>
             </div>
           </div>
-        </div>
       </div>
     </nav>
     <!-- Main Content -->
@@ -53,7 +43,10 @@
       <div class="container">
         <div class="columns">
           <div class="column is-6">
-            <p id="paragraph" class="bd-notification is-primary">This application was assigned by UC Berkeley Bootcamp and solves real-world problems by integrating data received from multiple server-side API requests. The website was built collaboratively by scratch using visual studio code and deployed from Github pages. The website is designed to let a user view popular music videos from around the world and to be able to comment and share their comment with the appropriate video. Once the user chooses a country and clicks the submit button, a new page will present various music videos using YouTube API. This application is user friendly and consists of a top navbar for direction. Multiple coding pages are used such as index.html, style.css, app.js and a resultsapp.js page. Bulma is the CSS framework used to style the web page and Blogger is used to take in user input for comments The hope of this web application is to provide a fun and interactive music video sharing tool that the user finds to be friendly and simple to navigate.</p>
+            <h1 class="title is-1">Ad-free Video Streaming</h1>
+            <p id="paragraph" class="bd-notification is-primary">This application emphasizes the use of Javascript to generate a video player that doesn't play ads, and allows for the user to make a comment and post it to the page. </p>
+            <p>Please enable Javascript to get the best use out of this application.</p>
+            <p>To get started, please select a country you'd like to look up, and click Search.</p>
           </div>
           <div class="column is-6">
             <form id="country-form" style="padding-bottom:75%;">
@@ -75,7 +68,7 @@
                 <option value="SE">Sweden</option>
                 <option value="US">United States</option>
                </select>
-              <button id="Search YouTube">Generate</button>
+              <button id="Search YouTube">Search</button>
             </form>
           </div>
         </div>
