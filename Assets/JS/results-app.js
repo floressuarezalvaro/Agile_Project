@@ -43,7 +43,7 @@ function showVids (itemsObj) {
     // creates empty paragraph element
     var vidEl = document.createElement('p');
     // puts Thumbnail with metadata, Title, and Duration all in one <p> and <div>
-    vidEl.innerHTML = '<img src="' + itemsObj.snippet.thumbnails.default.url + '"class="click-me" id="' + itemsObj.id + '"><br/><strong>Snippet:</strong> ' + itemsObj.snippet.channelTitle + ' // ' + itemsObj.contentDetails.duration + '<br/>';
+    vidEl.innerHTML = '<img src="' + itemsObj.snippet.thumbnails.default.url + '"class="click-me" id="' + itemsObj.id + '"><br/><strong>Snippet:</strong> ' + itemsObj.snippet.channelTitle + ' // ' + itemsObj.contentDetails.duration + '<br/><br/>';
 
     ytDiv.append(vidEl)
     ytContent.append(ytDiv)
