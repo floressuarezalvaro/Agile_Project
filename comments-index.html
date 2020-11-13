@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ad-Free Video Lookup</title>
+    <script src="https://kit.fontawesome.com/8b64433d1e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="./Assets/CSS/style.css">
+
+</head>
+<body>
+     <!-- LEFT COLUMN WITH VIDEO TITLE/DESC/Uploader -->
+     <div class="column is-one-quarter" id="video-info" class="has-background-white">  
+        <header id="video-title" class="title"><strong>Title Video</strong></header>
+        <header id="video-uploader" class="subtitle">Uploader/Channel Name</header>
+        <p id="video-desc">Loren ipsum It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is t.
+        </p>
+      </div>
+    <p>Hello</p>
+    <div class="column is-half" id="video-playback">
+        <iframe width="100%" height="400" src="https://www.youtube.com/embed/KPlrXTOzegY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>          
+
+        <!-- MIDDLE COMMENT FIELD EMBED -->
+        <p><textarea width="100%" rows="8" placeholder="Comment Here" id="video-comment-box"></textarea></textarea></p>
+        <p><button id="video-comment-submit"> Submit</button></p>
+        
+        <!-- Comment section -->
+
+    </div>
+
+<script src="./Assets/JS/comments.js"></script>
+<script src="./Assets/JS/reactive-nav.js"></script>
+</body>
+</html>
