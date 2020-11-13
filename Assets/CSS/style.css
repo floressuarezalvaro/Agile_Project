@@ -5,7 +5,8 @@ body {
 }
 
 .container {
-  height: 90vh;
+  padding-top: 3.25rem; /* Account for Bulma Nav height */
+  padding-bottom: 3.25rem; /* Account for Bulma Footer height */
   width: 100%;
   display: flex;
   align-items: center;
