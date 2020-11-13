@@ -39,22 +39,32 @@ function searchYoutube (Country) {
 function showVids (itemsObj) {
     console.log(itemsObj)
     let ytDiv = document.createElement('div');
+    // Adds class and ID to the div item so click the title / duration / thumbnail all send people to next page
+    ytDiv.setAttribute("class","click-me");
+    ytDiv.setAttribute("id", itemsObj.id);
 
     // creates empty paragraph element
     var vidEl = document.createElement('p');
-    // puts Thumbnail with metadata, Title, and Duration all in one <p> and <div>
-    vidEl.innerHTML = '<img src="' + itemsObj.snippet.thumbnails.default.url + '"class="click-me" id="' + itemsObj.id + '"><br/><strong>Snippet:</strong> ' + itemsObj.snippet.channelTitle + ' // ' + itemsObj.contentDetails.duration + '<br/><br/>';
-
+    // puts thumnail, title, and non-parsed duration here
+    vidEl.innerHTML = '<img src="' + itemsObj.snippet.thumbnails.default.url + '"><br/>' + itemsObj.snippet.channelTitle + ' // ' + itemsObj.contentDetails.duration + '<br/><br/>';
+    
     ytDiv.append(vidEl)
     ytContent.append(ytDiv)
 };
 
 getParams(); //actually runs the program
 
-// Adds event listeners to all elements with the class "clickme" and console logs it (to be pushed to URL later)
-document.querySelectorAll(".click-me").forEach(item => {
+// Adds event listeners to all elements with the class "clickme", mostly so people can click a video thumbnail and go to the video in question.
+// Push on Nov 13 Noon non functional??
+var clickMeStuff = document.querySelectorAll(".click-me")
+clickMeStuff.forEach(item => {
     item.addEventListener("click", function () {
         var videoID = this.getAttribute("id");   // <-- functional
         console.log(videoID);
+
+        // Sends user to the next part
+        var queryUrl = './comments-index.html?q=' + videoID;
+        location.assign(queryUrl);
+
     });
 });
