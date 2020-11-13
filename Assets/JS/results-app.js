@@ -1,6 +1,6 @@
 var searchForm = document.querySelector('#country-form');
 var ytContent = document.querySelector('#topresults')
-var key = 'AIzaSyDgOQIrGftzlp5IuWOtEiSU0Iw4tWvD_NE'
+var key = 'AIzaSyCvHoQNCOCyA7XEf4h8L333aP82U1LV34s'
 
 function getParams() {
     // Get the country params out of the URL and convert it to an array
@@ -30,7 +30,7 @@ function searchYoutube (Country) {
                 for (let i = 0; i < data.items.length; i++) {
                     showVids(data.items[i]);
                 }
-            }
+        }
         })
         // .catch(function (error) {
         //     console.error(error);
@@ -44,7 +44,7 @@ function showVids (itemsObj) {
     ytDiv.append(ytBody);
 
     var vidThumb = document.createElement('p');
-    vidThumb.innerHTML = '<img src="' + itemsObj.snippet.thumbnails.default.url + '"><br/>';
+    vidThumb.innerHTML = '<img src="' + itemsObj.snippet.thumbnails.default.url + '"class="click-me" id="' + itemsObj.id + '"><br/>';
     
     var idContent = document.createElement('p');
     idContent.innerHTML = '<strong>ID:</strong> ' + itemsObj.id + '<br/>';
