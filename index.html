@@ -1,92 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ad-Free Video Lookup</title>
     <script src="https://kit.fontawesome.com/8b64433d1e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="./Assets/CSS/style.css">
+  </head>
 
-</head>
-<body>
-  <!-- Navigation -->
-<nav id="navBar" class="navbar is-primary" role="navigation">
-  <div class="navbar-brand">
-<!-- This needs to change to our app name or icon -->
-    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <!-- This Should link to the landing page -->
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item" href="./index.html">
-          <i class="fas fa-h-square"> Home</i>
-        </a>
-  <!-- This can get changed to randomize a new set of popular videos || we can change this to link directly to blog page -->
-        <a class="fas navbar-item" href="./Other.html">
-          Documentation
+  <body>
+    <!-- Navigation -->
+    <nav id="navBar" class="navbar is-primary" role="navigation">
+      <div class="navbar-brand">
+      <!-- This needs to change to our app name or icon -->
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
         </a>
       </div>
-  <!-- We can update this to add more countries -->
-      <div class="navbar-end">
-        <div class="navbar-item has-dropdown is-hoverable navbar-end">
+      <!-- This Should link to the landing page -->
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="./index.html">
+            <i class="fas fa-h-square"> Home</i>
+          </a>
+          <!-- This can get changed to randomize a new set of popular videos || we can change this to link directly to blog page -->
+          <a class="fas navbar-item" href="https://github.com/tongjac/Agile_Project/blob/main/README.md" target="_blank">
+            Documentation
+          </a>
+        </div>
+        <!-- Links to our Linkedin and our central github -->
+        <div class="navbar-end">
+          <div class="navbar-item has-dropdown is-hoverable navbar-end">
             <a class="navbar-link">
               Links
             </a>
             <div class="navbar-dropdown" data-style="width: 18rem;">
-              <a class="fab fa-github navbar-item" href="https://github.com/tongjac/Agile_Project" target="_blank"> Bug Busters</a>
+              <a id="links" class="fab fa-github navbar-item" href="https://github.com/tongjac/Agile_Project" target="_blank"> Bug Busters</a>
               <a class="fab fa-linkedin navbar-item" href="https://www.linkedin.com/in/faith-elsen-6a7a931b5/" target="_blank"> Faith</a>
               <a class="fab fa-linkedin navbar-item" href="https://www.linkedin.com/in/tong-jacky/" target="_blank"> Jacky</a>
               <a class="fab fa-linkedin navbar-item" href="https://www.linkedin.com/in/afloressuarez/" target="_blank"> Alvaro</a>
               <a class="fab fa-linkedin navbar-item" href="https://www.linkedin.com/in/franco-phan-5b14b7144/" target="_blank"> Franco</a>
             </div>
           </div>
+        </div>
       </div>
-    </div>
-  </nav>
-<section class="section">
-<div class="bgimage"></div>
-<div class="container">
-  <div class="columns">
-    <div class="column is-6">
-      <p id="paragraph" class="bd-notification is-primary">This application was assigned by UC Berkeley Bootcamp and solves real-world problems by integrating data received from multiple server-side API requests. The website was built collaboratively by scratch using visual studio code and deployed from Github pages. The website is designed to let a user view popular music videos from around the world and to be able to comment and share their comment with the appropriate video. Once the user chooses a country and clicks the submit button, a new page will present various music videos using YouTube API. This application is user friendly and consists of a top navbar for direction. Multiple coding pages are used such as index.html, style.css, app.js and a resultsapp.js page. Bulma is the CSS framework used to style the web page and Blogger is used to take in user input for comments The hope of this web application is to provide a fun and interactive music video sharing tool that the user finds to be friendly and simple to navigate.</p>
-    </div>
-    <div class="column is-6">
-      <form id="country-form" style="padding-bottom:75%;">
-        <p>Where do you want to go?</p>
-        <select id="country-input">
-            <option value="" disabled selected>Select a country...</option>
-            <option value="AU">Austrailia</option>
-            <option value="BZ">Brazil</option>
-            <option value="CA">Canada</option>
-            <option value="CN">China</option>
-            <option value="FR">France</option>
-            <option value="DE">Germany</option>
-            <option value="IN">India</option>
-            <option value="IR">Iran</option>
-            <option value="JP">Japan</option>
-            <option value="MX">Mexico</option>
-            <option value="ZA">South Africa</option>
-            <option value="KR">South Korea</option>
-            <option value="SE">Sweden</option>
-            <option value="US">United States</option>
-        </select>
-        <button id="Search YouTube">Generate</button>
-    </form>
-    </div>
-  </div>
-</div>
-</section>
-<footer id="footer" class="footer">
-</footer>
+    </nav>
+    <!-- Main Content -->
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-6">
+            <p id="paragraph" class="bd-notification is-primary">This application was assigned by UC Berkeley Bootcamp and solves real-world problems by integrating data received from multiple server-side API requests. The website was built collaboratively by scratch using visual studio code and deployed from Github pages. The website is designed to let a user view popular music videos from around the world and to be able to comment and share their comment with the appropriate video. Once the user chooses a country and clicks the submit button, a new page will present various music videos using YouTube API. This application is user friendly and consists of a top navbar for direction. Multiple coding pages are used such as index.html, style.css, app.js and a resultsapp.js page. Bulma is the CSS framework used to style the web page and Blogger is used to take in user input for comments The hope of this web application is to provide a fun and interactive music video sharing tool that the user finds to be friendly and simple to navigate.</p>
+          </div>
+          <div class="column is-6">
+            <form id="country-form" style="padding-bottom:75%;">
+              <p>Where do you want to go?</p>
+              <select id="country-input">
+                <option value="" disabled selected>Select a country...</option>
+                <option value="AU">Austrailia</option>
+                <option value="BZ">Brazil</option>
+                <option value="CA">Canada</option>
+                <option value="CN">China</option>
+                <option value="FR">France</option>
+                <option value="DE">Germany</option>
+                <option value="IN">India</option>
+                <option value="IR">Iran</option>
+                <option value="JP">Japan</option>
+                <option value="MX">Mexico</option>
+                <option value="ZA">South Africa</option>
+                <option value="KR">South Korea</option>
+                <option value="SE">Sweden</option>
+                <option value="US">United States</option>
+               </select>
+              <button id="Search YouTube">Generate</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer content -->
+    <footer id="footer" class="footer">
+    </footer>
 
 <!-- Font Awesome moved to top due to text inconsistencies that made "Documentation" and "Home" display differently. -->
 <!-- <script src="https://kit.fontawesome.com/8b64433d1e.js" crossorigin="anonymous"></script> -->
-<script src="./Assets/JS/app.js"></script>
-<script src="./Assets/JS/reactive-nav.js"></script>
-</body>
+    <script src="./Assets/JS/app.js"></script>
+    <script src="./Assets/JS/reactive-nav.js"></script>
+  </body>
 </html>
