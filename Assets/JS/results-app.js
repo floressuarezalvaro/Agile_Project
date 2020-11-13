@@ -1,6 +1,6 @@
 var searchForm = document.querySelector('#country-form');
 var ytContent = document.querySelector('#topresults')
-var key = 'AIzaSyDgOQIrGftzlp5IuWOtEiSU0Iw4tWvD_NE'
+var key = 'AIzaSyA9LPhX2hmq8A-HpWozTgY90M5cTwpcVBw'
 
 function getParams() {
     // Get the country params out of the URL and convert it to an array
