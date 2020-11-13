@@ -1,14 +1,12 @@
 body {
-  height: 100vh;
+  height: 100vh; /* Body takes up all of the viewport */
   align-items: center;
   justify-content: center;
-  /* background-image: url("https://geology.com/world/world-map.gif");
-  background-repeat: no-repeat;
-  background-size: static; */
 }
 
 .container {
-  height: 89vh;
+  padding-top: 3.25rem; /* Account for Bulma Nav height */
+  padding-bottom: 3.25rem; /* Account for Bulma Footer height */
   width: 100%;
   display: flex;
   align-items: center;
@@ -18,25 +16,14 @@ body {
   background-size: cover;
 }
 
-/* .bgimage {
-  background-image: url("./Photos/WorldMap.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.5;
-} */
-
-img {
-  opacity: 0.2;
-}
-
 #navBar {
   position: fixed; /* Set the navbar to fixed position */
   width: 100%; /* Full width */
   background-color: gray;
 }
 
-.navbar-dropdown {
-  width: 200px:
+.navbar-end {
+  padding-right: 30px;
 }
 
 #paragraph {
@@ -48,7 +35,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 1 !important;
 }
 
 a {

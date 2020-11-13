@@ -1,6 +1,6 @@
 var searchForm = document.querySelector('#country-form');
 var ytContent = document.querySelector('#topresults')
-var key = 'AIzaSyA9LPhX2hmq8A-HpWozTgY90M5cTwpcVBw'
+var key = 'AIzaSyCvHoQNCOCyA7XEf4h8L333aP82U1LV34s'
 
 function getParams() {
     // Get the country params out of the URL and convert it to an array
@@ -11,10 +11,9 @@ function getParams() {
     searchYoutube(Country)
 }
 
-
 function searchYoutube (Country) {
     var ytUrl = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=${Country}&key=${key}`
-    
+    // Fetch Youtube Video List
     fetch(ytUrl)
         .then(function (response) {
             return response.json();
@@ -30,7 +29,7 @@ function searchYoutube (Country) {
                 for (let i = 0; i < data.items.length; i++) {
                     showVids(data.items[i]);
                 }
-            }
+        }
         })
         // .catch(function (error) {
         //     console.error(error);
@@ -40,23 +39,32 @@ function searchYoutube (Country) {
 function showVids (itemsObj) {
     console.log(itemsObj)
     let ytDiv = document.createElement('div');
-    let ytBody = document.createElement('div');
-    ytDiv.append(ytBody);
+    // Adds class and ID to the div item so click the title / duration / thumbnail all send people to next page
+    ytDiv.setAttribute("class","click-me");
+    ytDiv.setAttribute("id", itemsObj.id);
 
-    var vidThumb = document.createElement('p');
-    vidThumb.innerHTML = '<img src="' + itemsObj.snippet.thumbnails.default.url + '"><br/>';
+    // creates empty paragraph element
+    var vidEl = document.createElement('p');
+    // puts thumnail, title, and non-parsed duration here
+    vidEl.innerHTML = '<img src="' + itemsObj.snippet.thumbnails.default.url + '"><br/>' + itemsObj.snippet.channelTitle + ' // ' + itemsObj.contentDetails.duration + '<br/><br/>';
     
-    var idContent = document.createElement('p');
-    idContent.innerHTML = '<strong>ID:</strong> ' + itemsObj.id + '<br/>';
-
-    var snippetContent = document.createElement('p');
-    snippetContent.innerHTML = '<strong>Snippet:</strong> ' + itemsObj.snippet.channelTitle + ' // ';
-
-    var vidDuration = document.createElement('p');
-    vidDuration.innerHTML = ' ' + itemsObj.contentDetails.duration + '<br/>';
-
-    ytBody.append(vidThumb, idContent, snippetContent, vidDuration)
+    ytDiv.append(vidEl)
     ytContent.append(ytDiv)
-}
+};
 
-getParams()
+getParams(); //actually runs the program
+
+// Adds event listeners to all elements with the class "clickme", mostly so people can click a video thumbnail and go to the video in question.
+// Push on Nov 13 Noon non functional??
+var clickMeStuff = document.querySelectorAll(".click-me")
+clickMeStuff.forEach(item => {
+    item.addEventListener("click", function () {
+        var videoID = this.getAttribute("id");   // <-- functional
+        console.log(videoID);
+
+        // Sends user to the next part
+        var queryUrl = './comments-index.html?q=' + videoID;
+        location.assign(queryUrl);
+
+    });
+});
