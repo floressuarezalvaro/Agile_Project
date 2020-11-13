@@ -16,7 +16,6 @@ body {
   background-image: url("../Photo/WorldMap.png");
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.5;
 }
 
 /* .bgimage {
@@ -34,6 +33,10 @@ img {
   position: fixed; /* Set the navbar to fixed position */
   width: 100%; /* Full width */
   background-color: gray;
+}
+
+.navbar-dropdown {
+  width: 200px:
 }
 
 #paragraph {
