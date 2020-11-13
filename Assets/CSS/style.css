@@ -1,11 +1,11 @@
 body {
-  height: 100vh;
+  height: 100vh; /* Body takes up all of the viewport */
   align-items: center;
   justify-content: center;
 }
 
 .container {
-  height: 89vh;
+  height: 90vh;
   width: 100%;
   display: flex;
   align-items: center;
