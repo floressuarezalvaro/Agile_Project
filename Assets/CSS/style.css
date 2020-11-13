@@ -2,9 +2,6 @@ body {
   height: 100vh;
   align-items: center;
   justify-content: center;
-  /* background-image: url("https://geology.com/world/world-map.gif");
-  background-repeat: no-repeat;
-  background-size: static; */
 }
 
 .container {
@@ -18,25 +15,14 @@ body {
   background-size: cover;
 }
 
-/* .bgimage {
-  background-image: url("./Photos/WorldMap.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.5;
-} */
-
-img {
-  opacity: 0.2;
-}
-
 #navBar {
   position: fixed; /* Set the navbar to fixed position */
   width: 100%; /* Full width */
   background-color: gray;
 }
 
-.navbar-dropdown {
-  width: 200px:
+.navbar-end {
+  padding-right: 30px;
 }
 
 #paragraph {
