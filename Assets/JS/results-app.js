@@ -11,10 +11,9 @@ function getParams() {
     searchYoutube(Country)
 }
 
-
 function searchYoutube (Country) {
     var ytUrl = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=${Country}&key=${key}`
-    
+    // Fetch Youtube Video List
     fetch(ytUrl)
         .then(function (response) {
             return response.json();
@@ -40,23 +39,22 @@ function searchYoutube (Country) {
 function showVids (itemsObj) {
     console.log(itemsObj)
     let ytDiv = document.createElement('div');
-    let ytBody = document.createElement('div');
-    ytDiv.append(ytBody);
 
-    var vidThumb = document.createElement('p');
-    vidThumb.innerHTML = '<img src="' + itemsObj.snippet.thumbnails.default.url + '"class="click-me" id="' + itemsObj.id + '"><br/>';
-    
-    var idContent = document.createElement('p');
-    idContent.innerHTML = '<strong>ID:</strong> ' + itemsObj.id + '<br/>';
+    // creates empty paragraph element
+    var vidEl = document.createElement('p');
+    // puts Thumbnail with metadata, Title, and Duration all in one <p> and <div>
+    vidEl.innerHTML = '<img src="' + itemsObj.snippet.thumbnails.default.url + '"class="click-me" id="' + itemsObj.id + '"><br/><strong>Snippet:</strong> ' + itemsObj.snippet.channelTitle + ' // ' + itemsObj.contentDetails.duration + '<br/>';
 
-    var snippetContent = document.createElement('p');
-    snippetContent.innerHTML = '<strong>Snippet:</strong> ' + itemsObj.snippet.channelTitle + ' // ';
-
-    var vidDuration = document.createElement('p');
-    vidDuration.innerHTML = ' ' + itemsObj.contentDetails.duration + '<br/>';
-
-    ytBody.append(vidThumb, idContent, snippetContent, vidDuration)
+    ytDiv.append(vidEl)
     ytContent.append(ytDiv)
-}
+};
 
-getParams()
+getParams(); //actually runs the program
+
+// Adds event listeners to all elements with the class "clickme" and console logs it (to be pushed to URL later)
+document.querySelectorAll(".click-me").forEach(item => {
+    item.addEventListener("click", function () {
+        var videoID = this.getAttribute("id");   // <-- functional
+        console.log(videoID);
+    });
+});
