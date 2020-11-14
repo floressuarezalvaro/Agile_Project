@@ -17,12 +17,10 @@ function dictPull (comInput) {
         });
 };
 
-
-
 function handleSearchFormSubmit(e) {
     e.preventDefault();
   
-    var comInput = document.querySelector('#video-comment-box').value;
+    var comInput = document.querySelector('#translation-input').value;
     if (!comInput) {
       console.error('Post cannot be blank');
       return;
@@ -36,7 +34,6 @@ comSubmit.addEventListener('submit', handleSearchFormSubmit);
 
 var description = document.querySelector("#video-desc");
 var title = document.querySelector("#video-title");
-var uploader = document.querySelector("#video-uploader");
 
 function getParams() {
     // Get the Video ID out of the URL and convert it to an array
@@ -51,7 +48,6 @@ function getParams() {
     } else {
         // change Description text to error message if ID's missing or invalid
         description.textContent = "Looks like you got an error, go back to the homepage.";
-        title.textContent = "Invalid Video"; 
     }
 };
 
@@ -61,7 +57,7 @@ function showVids (str) {
     videoDisplay.setAttribute("id", str);
 
     // the Youtube embed with Video ID inserted
-    videoDisplay.innerHTML = `<iframe width="100%" height="400" src="https://www.youtube.com/embed/${str}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+    videoDisplay.innerHTML = `<iframe width="100%" height="500" src="https://www.youtube.com/embed/${str}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
 
     // Puts this div with Iframe video embed inside the VIDEO-HERE element in HTML. Works if Video here's Div, P, Span, or Video
     document.querySelector("#video-here").append(videoDisplay)
@@ -73,7 +69,7 @@ function showComm (dictObj) {
     let dictEl = document.querySelector('#trans-div')
 
     bodyDictEl = document.createElement('p');
-    bodyDictEl.innerHTML = dictObj[0].shortdef[0];
+    bodyDictEl.textContent = dictObj[0].shortdef[0];
 
     console.log(bodyDictEl)
     dictEl.append(bodyDictEl)
@@ -81,8 +77,4 @@ function showComm (dictObj) {
 
 getParams();
 
-// Testing textContent changes
-description.textContent = "change description text";
-title.textContent = "Test Title write";
-uploader.textContent = "Fake name for Uploader test";
 
