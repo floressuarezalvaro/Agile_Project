@@ -55,7 +55,6 @@ function showVids (itemsObj) {
     var clickMeStuff = document.querySelectorAll(".click-me")
     clickMeStuff.forEach(item => {
         item.addEventListener("click", clickbait);
-        console.log("Bug Troubleshooting");
     });
 };
 
