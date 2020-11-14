@@ -10,59 +10,57 @@
   </head>
 
   <body>
-    <!-- Navigation -->
-    <nav id="navBar" class="navbar is-primary" role="navigation">
-      <!-- Links to landing page Index.html -->
-      <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item" href="./index.html">
-            <i class="fas fa-h-square"> Home</i>
+  <!-- Navigation -->
+  <nav id="navBar" class="navbar is-primary" role="navigation">
+    <!-- Links to landing page Index.html -->
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="./index.html">
+          <i class="fas fa-h-square"> Home</i>
+        </a>
+        <!-- Link to documentation -->
+        <a class="fas navbar-item" href="https://github.com/tongjac/Agile_Project/blob/main/README.md" target="_blank">
+          Documentation
+        </a>
+      </div>
+      <!-- Located at the end of the Navbar, links to our Linkedin and our central github -->
+        <div class="navbar-item has-dropdown is-hoverable navbar-end">
+          <a class="navbar-link">
+            Links
           </a>
-          <!-- Link to documentation -->
-          <a class="fas navbar-item" href="https://github.com/tongjac/Agile_Project/blob/main/README.md" target="_blank">
-            Documentation
-          </a>
-        </div>
-        <!-- Located at the end of the Navbar, links to our Linkedin and our central github -->
-          <div class="navbar-item has-dropdown is-hoverable navbar-end">
-            <a class="navbar-link">
-              Links
-            </a>
-            <div class="navbar-dropdown">
-              <a id="links" class="fab fa-github navbar-item" href="https://github.com/tongjac/Agile_Project" target="_blank"> Bug Busters</a>
-              <a class="fab fa-linkedin navbar-item" href="https://www.linkedin.com/in/faith-elsen-6a7a931b5/" target="_blank"> Faith</a>
-              <a class="fab fa-linkedin navbar-item" href="https://www.linkedin.com/in/tong-jacky/" target="_blank"> Jacky</a>
-              <a class="fab fa-linkedin navbar-item" href="https://www.linkedin.com/in/afloressuarez/" target="_blank"> Alvaro</a>
-              <a class="fab fa-linkedin navbar-item" href="https://www.linkedin.com/in/franco-phan-5b14b7144/" target="_blank"> Franco</a>
-            </div>
+          <div class="navbar-dropdown">
+            <a id="links" class="fab fa-github navbar-item" href="https://github.com/tongjac/Agile_Project" target="_blank"> Bug Busters</a>
+            <a class="fab fa-linkedin navbar-item" href="https://www.linkedin.com/in/faith-elsen-6a7a931b5/" target="_blank"> Faith</a>
+            <a class="fab fa-linkedin navbar-item" href="https://www.linkedin.com/in/tong-jacky/" target="_blank"> Jacky</a>
+            <a class="fab fa-linkedin navbar-item" href="https://www.linkedin.com/in/afloressuarez/" target="_blank"> Alvaro</a>
+            <a class="fab fa-linkedin navbar-item" href="https://www.linkedin.com/in/franco-phan-5b14b7144/" target="_blank"> Franco</a>
           </div>
-      </div>
-    </nav>
-
+        </div>
+    </div>
+  </nav>
+    <div class="container">
      <!-- LEFT COLUMN WITH VIDEO TITLE/DESC/Uploader -->
-     <div class="column is-one-quarter" id="video-info" class="has-background-white">  
-        <header class="title"><strong><span id="video-title">Title Video</span></strong></header>
-        <header class="subtitle"><span id="video-uploader">Title Video</span></header>
-        <p id="video-desc">Loren ipsum It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is t.
-        </p>
-      </div>
-    <p>Hello</p>
-    <div class="column is-half">
+      <div class="column is-three-quarters">
+        <header class="subtitle"><strong><span id="video-desc">Enjoy your video!</span></strong></header>
         <div id="video-here">
           <!-- javascript will write video code here -->
         </div>     
 
-        <!-- MIDDLE COMMENT FIELD EMBED -->
+        <!-- LEFT FIELD VIDEO EMBED / Translation Init -->
         <form id="search-form">
-            <p><textarea width="100%" rows="8" placeholder="Comment Here" id="video-comment-box"></textarea></textarea></p>
-            <p><button id="video-comment-submit"> Submit</button></p>
+            <p><textarea width="100%" rows="8" placeholder="Type English or Spanish here." id="translation-input"></textarea></textarea></p>
+            <p><button id="video-comment-submit">Translate</button></p>
         </form>
+
+      </div>
+      <!-- RIGHT COLUMN WITH TRANSLATION -->
+      <div class="column is-one-quarter id="video-info" class="has-background-white">  
         <!-- Comment section -->
-        <div id="trans-div">
+        <div id="trans-div" style="max-height: 650px; background-color: white; padding: 3px;">
+          
         </div>
-
+      </div>
     </div>
-
     <!-- Footer content -->
     <footer id="footer" class="footer" >
         <strong class="has-text-white">Developed by UCB Bug Busters Winter 2020</strong>
