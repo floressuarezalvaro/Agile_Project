@@ -50,21 +50,25 @@ function showVids (itemsObj) {
     
     ytDiv.append(vidEl)
     ytContent.append(ytDiv)
+
+    // Adds event listeners to all elements with the class "clickme", mostly so people can click a video thumbnail and go to the video in question.
+    var clickMeStuff = document.querySelectorAll(".click-me")
+    clickMeStuff.forEach(item => {
+        item.addEventListener("click", clickbait);
+        console.log("Bug Troubleshooting");
+    });
+};
+
+function clickbait() {
+    // Grabs ID
+    var videoID = this.getAttribute("id");   // <-- functional
+    console.log(videoID);
+
+    // Sends user to the next part
+    var queryUrl = './comments-index.html?q=' + videoID;
+    location.assign(queryUrl);
 };
 
 getParams(); //actually runs the program
 
-// Adds event listeners to all elements with the class "clickme", mostly so people can click a video thumbnail and go to the video in question.
-// Push on Nov 13 Noon non functional??
-var clickMeStuff = document.querySelectorAll(".click-me")
-clickMeStuff.forEach(item => {
-    item.addEventListener("click", function () {
-        var videoID = this.getAttribute("id");   // <-- functional
-        console.log(videoID);
 
-        // Sends user to the next part
-        var queryUrl = './comments-index.html?q=' + videoID;
-        location.assign(queryUrl);
-
-    });
-});
