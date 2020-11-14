@@ -46,7 +46,7 @@ function showVids (itemsObj) {
     // creates empty paragraph element
     var vidEl = document.createElement('p');
     // puts thumnail, title, and non-parsed duration here
-    vidEl.innerHTML = '<img src="' + itemsObj.snippet.thumbnails.default.url + '"><br/>' + itemsObj.snippet.channelTitle + ' // ' + itemsObj.contentDetails.duration + '<br/><br/>';
+    vidEl.innerHTML = '<img src="' + itemsObj.snippet.thumbnails.high.url + '"><br/>' + itemsObj.snippet.channelTitle + ' // ' + itemsObj.contentDetails.duration + '<br/><br/>';
     
     ytDiv.append(vidEl)
     ytContent.append(ytDiv)
