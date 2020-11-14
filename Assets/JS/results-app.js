@@ -11,10 +11,9 @@ function getParams() {
     searchYoutube(Country)
 }
 
-
 function searchYoutube (Country) {
     var ytUrl = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=${Country}&key=${key}`
-    
+    // Fetch Youtube Video List
     fetch(ytUrl)
         .then(function (response) {
             return response.json();
@@ -40,23 +39,36 @@ function searchYoutube (Country) {
 function showVids (itemsObj) {
     console.log(itemsObj)
     let ytDiv = document.createElement('div');
-    let ytBody = document.createElement('div');
-    ytDiv.append(ytBody);
+    // Adds class and ID to the div item so click the title / duration / thumbnail all send people to next page
+    ytDiv.setAttribute("class","click-me");
+    ytDiv.setAttribute("id", itemsObj.id);
 
-    var vidThumb = document.createElement('p');
-    vidThumb.innerHTML = '<img src="' + itemsObj.snippet.thumbnails.default.url + '"class="click-me" id="' + itemsObj.id + '"><br/>';
+    // creates empty paragraph element
+    var vidEl = document.createElement('p');
+    // puts thumnail, title, and non-parsed duration here
+    vidEl.innerHTML = '<img src="' + itemsObj.snippet.thumbnails.default.url + '"><br/>' + itemsObj.snippet.channelTitle + ' // ' + itemsObj.contentDetails.duration + '<br/><br/>';
     
-    var idContent = document.createElement('p');
-    idContent.innerHTML = '<strong>ID:</strong> ' + itemsObj.id + '<br/>';
-
-    var snippetContent = document.createElement('p');
-    snippetContent.innerHTML = '<strong>Snippet:</strong> ' + itemsObj.snippet.channelTitle + ' // ';
-
-    var vidDuration = document.createElement('p');
-    vidDuration.innerHTML = ' ' + itemsObj.contentDetails.duration + '<br/>';
-
-    ytBody.append(vidThumb, idContent, snippetContent, vidDuration)
+    ytDiv.append(vidEl)
     ytContent.append(ytDiv)
-}
 
-getParams()
+    // Adds event listeners to all elements with the class "clickme", mostly so people can click a video thumbnail and go to the video in question.
+    var clickMeStuff = document.querySelectorAll(".click-me")
+    clickMeStuff.forEach(item => {
+        item.addEventListener("click", clickbait);
+        console.log("Bug Troubleshooting");
+    });
+};
+
+function clickbait() {
+    // Grabs ID
+    var videoID = this.getAttribute("id");   // <-- functional
+    console.log(videoID);
+
+    // Sends user to the next part
+    var queryUrl = './comments-index.html?q=' + videoID;
+    location.assign(queryUrl);
+};
+
+getParams(); //actually runs the program
+
+
