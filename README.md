@@ -15,7 +15,7 @@ Two APIs
 
 ## Summary
 
-- Combining HTML, CSS and Javascript this application uses multiple APIs to allow the user to search for popular music videos and translate English and Spanish in the comment box
+- Combining HTML, CSS and Javascript this application uses multiple APIs to allow the user to search for the top videos per selected country and translates English and Spanish in the comment box
 - Javascript is used to make dynamic changes to an HTML document
   A drop down menu
 - The user can select a country to view the most popular music videos in that area
@@ -29,7 +29,7 @@ Dictionary Translator
 
 - Server-side APIs
 - The user will see results of a video search
-  The input is based on the selected dropdown menu
+- The input is based on the selected dropdown menu
 - The website should save user information and display a result
 
 ## To Execute File:
@@ -39,14 +39,16 @@ Open in browser
 ## Features:
 
 - HTML Pages
-  Index.html
+  index.html, results-index.html, comments-index.html
   Contains basic user input items and buttons with divs and ids
   Attaches to CSS and JavaScript files
-- CSS Page
+- CSS Pages
   Styles.css
   Contains centering and styling for html user input features
   Contains media queries
-- Javascript Page Contains: Variables, including arrays and value placeholders, dropdown menu, submit button, if statements, and functions
+- Javascript Pages 
+  app.js, results-app.js, comments.js, and reactive-nav.js
+  Variables, including arrays and value placeholders, dropdown menu, submit button, if statements, and functions
 
 ## Authors
 
