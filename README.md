@@ -1,11 +1,11 @@
 # Agile Project - Video Streaming
 
-This application was assigned by UC Berkeley Bootcamp and solves real-world problems by integrating data received from multiple server-side API requests. The website was built collaboratively by scratch using visual studio code and deployed from Github pages. The website is designed to let a user view popular music videos from around the world and to be able to translate English to Spanish and Spanish to English. Once the user chooses a country and clicks the submit button, a new page will present various popular videos using YouTube API.
+This application was assigned by UC Berkeley Bootcamp and solves real-world problems by integrating data received from multiple server-side API requests. The website was built collaboratively by scratch using visual studio code and deployed from Github pages. The website is designed to let a user view videos from around the world and to be able to translate English to Spanish and Spanish to English. Once the user chooses a country and clicks the submit button, a new page will present the selected country's most popular videos using YouTube API.
 
 This application is user friendly and consists of a top navbar for direction. Multiple coding pages are used such as index.html, style.css, app.js and a resultsapp.js page. Bulma is the CSS framework used to style the web page, YouTube API is for video application, and Marriam Webster Dictionary API allows for translation. The hope of this web application is to provide a fun and interactive music video sharing tool that is simple to navigate.
 
 This project has been deployed to GitHub Pages. To test it out yourself, you can follow this deployment link:
-https://tongjac.github.io/Agile_Project/
+https://floressuarezalvaro.github.io/Agile_Project/
 
 ## Prerequisites
 
